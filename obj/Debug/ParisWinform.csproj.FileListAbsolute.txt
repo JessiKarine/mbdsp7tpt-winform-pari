@@ -1,0 +1,13 @@
+E:\Etudes\tpt vrai\ParisWinform\bin\Debug\ParisWinform.exe.config
+E:\Etudes\tpt vrai\ParisWinform\bin\Debug\ParisWinform.exe
+E:\Etudes\tpt vrai\ParisWinform\bin\Debug\ParisWinform.pdb
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.csprojAssemblyReference.cache
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.Properties.Resources.resources
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.csproj.GenerateResource.cache
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.csproj.CoreCompileInputs.cache
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.exe
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.pdb
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.Login.resources
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.StartPage.resources
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.Debiter.resources
+E:\Etudes\tpt vrai\ParisWinform\obj\Debug\ParisWinform.ListeJoueurs.resources
