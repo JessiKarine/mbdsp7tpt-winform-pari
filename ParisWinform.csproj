@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,42 +52,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Debiter.cs">
+    <Compile Include="Affichages\Debiter\Debiter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Debiter.Designer.cs">
+    <Compile Include="Affichages\Debiter\Debiter.Designer.cs">
       <DependentUpon>Debiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListeJoueurs.cs">
+    <Compile Include="Affichages\ListeJoueurs\ListeJoueurs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeJoueurs.Designer.cs">
+    <Compile Include="Affichages\ListeJoueurs\ListeJoueurs.Designer.cs">
       <DependentUpon>ListeJoueurs.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartPage.cs">
+    <Compile Include="Affichages\StartPage\StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartPage.Designer.cs">
+    <Compile Include="Affichages\StartPage\StartPage.Designer.cs">
       <DependentUpon>StartPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Affichages\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Affichages\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Debiter.resx">
+    <EmbeddedResource Include="Affichages\Debiter\Debiter.resx">
       <DependentUpon>Debiter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeJoueurs.resx">
+    <EmbeddedResource Include="Affichages\ListeJoueurs\ListeJoueurs.resx">
       <DependentUpon>ListeJoueurs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Affichages\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartPage.resx">
+    <EmbeddedResource Include="Affichages\StartPage\StartPage.resx">
       <DependentUpon>StartPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -93,6 +99,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,5 +113,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
