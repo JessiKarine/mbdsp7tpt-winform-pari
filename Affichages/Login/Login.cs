@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParisWinform.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,24 @@ namespace ParisWinform
         public Login()
         {
             InitializeComponent();
+            WebService.InitializeClient();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+        public async Task CallLoginService(string login, string mdp)
+        {
+            await LoginService.CallLogin(login, mdp);
+        }
+
+        public async void Button1_Click(object sender, EventArgs e)
+        {
+            //System.Windows.Forms.MessageBox.Show("Hello");
+            //await CallLoginService(textBox1.Text, textBox2.Text);
+            await LoginService.CallLogin(textBox1.Text, textBox2.Text);
+        }
+        
     }
 }
