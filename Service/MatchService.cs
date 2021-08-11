@@ -11,14 +11,14 @@ namespace ParisWinform.Service
 {
     public class MatchService
     {
-        public static async Task<List<model.Match>> GetMatches()
+        public static async Task<List<model.Match>> GetMatches(String suite)
         {
-            using (var httpClient = new HttpClient())
+            if (WebService.ApiClient == null) {
+                WebService.InitializeClient();
+            }
+            using (var httpClient = WebService.ApiClient)
             {
-                httpClient.DefaultRequestHeaders.Accept.Clear();
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                var request = await httpClient.GetAsync("http://localhost:3000/api/match");
+                var request = await httpClient.GetAsync(WebService.uri+ "api/match"+ suite);
                 if (request.IsSuccessStatusCode)
                 {
                     var resultArray = await request.Content.ReadAsStringAsync();
@@ -32,6 +32,10 @@ namespace ParisWinform.Service
                 
             }
             return null;
+        }
+        public static async Task<List<model.Match>> GetMatchesByCategorie(String categorie)
+        {
+            return await GetMatches("nomcategorie/"+categorie);
         }
     }
 }

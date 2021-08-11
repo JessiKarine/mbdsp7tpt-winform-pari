@@ -21,9 +21,9 @@ namespace ParisWinform.Affichages.Match.ListeMatch
 
         private void ListeMatch_Load(object sender, EventArgs e)
         {
-            DisplayTableWithListview();
+            DisplayTableWithListview("");
         }
-        private async void DisplayTableWithListview()
+        private async void DisplayTableWithListview(String filtre)
         {
             listView1.GridLines = true;// Whether the grid lines are displayed
             listView1.FullRowSelect = true;// Whether to select the entire line
@@ -40,9 +40,7 @@ namespace ParisWinform.Affichages.Match.ListeMatch
             listView1.Columns.Add("Equipe 1", 100, HorizontalAlignment.Center);
             listView1.Columns.Add("Equipe 2", 100, HorizontalAlignment.Center);
 
-            List<model.Match>  listeMatch=await MatchService.GetMatches();
-
-            //model.Match m1 = new model.Match("60fc41e68d4114089a90cb56", "2021-10 -17", "18:00",new Categorie("2","Premier League","-"), 4, 5, "A venir", 0, new Equipe("1", "Arsenal", "Arsenal.jpg"), new Equipe("2", "Manchester", "Manchester.jpg"));
+            List<model.Match>  listeMatch=await MatchService.GetMatches(filtre);
 
             for (int i = 0; i < listeMatch.Count; i++)
             {
@@ -58,6 +56,13 @@ namespace ParisWinform.Affichages.Match.ListeMatch
                 listView1.Items.Add(item);
             }
             
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            String filtreCategorie = "";
+            if (textBox1.Text != null) filtreCategorie = textBox1.Text;
+            DisplayTableWithListview(filtreCategorie);
         }
     }
 }
