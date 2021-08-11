@@ -1,4 +1,5 @@
-﻿using ParisWinform.Service;
+﻿using ParisWinform.model;
+using ParisWinform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,9 +31,13 @@ namespace ParisWinform
 
         public async void Button1_Click(object sender, EventArgs e)
         {
-            //System.Windows.Forms.MessageBox.Show("Hello");
-            //await CallLoginService(textBox1.Text, textBox2.Text);
-            await LoginService.CallLogin(textBox1.Text, textBox2.Text);
+            Utilisateur util=await LoginService.CallLogin(textBox1.Text, textBox2.Text);
+            if (util != null)
+            {
+                StartPage lj = new StartPage(util);
+                lj.Show();
+                this.Hide();
+            }
         }
         
     }

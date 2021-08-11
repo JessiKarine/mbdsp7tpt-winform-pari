@@ -32,14 +32,14 @@ namespace ParisWinform
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.listeDesJoueursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mouToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.débiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.créditerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.déconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.déconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@ namespace ParisWinform
             this.listeDesJoueursToolStripMenuItem.Name = "listeDesJoueursToolStripMenuItem";
             this.listeDesJoueursToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.listeDesJoueursToolStripMenuItem.Text = "Liste des joueurs";
+            this.listeDesJoueursToolStripMenuItem.Click += new System.EventHandler(this.listeDesJoueursToolStripMenuItem_Click);
             // 
             // mouToolStripMenuItem
             // 
@@ -72,11 +73,22 @@ namespace ParisWinform
             this.mouToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.mouToolStripMenuItem.Text = "Mouvements";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // débiterToolStripMenuItem
             // 
             this.débiterToolStripMenuItem.Name = "débiterToolStripMenuItem";
             this.débiterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.débiterToolStripMenuItem.Text = "Débiter";
+            this.débiterToolStripMenuItem.Click += new System.EventHandler(this.débiterToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // créditerToolStripMenuItem
             // 
@@ -98,39 +110,29 @@ namespace ParisWinform
             // profilToolStripMenuItem
             // 
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.profilToolStripMenuItem.Text = "Profil";
-            // 
-            // déconnexionToolStripMenuItem1
-            // 
-            this.déconnexionToolStripMenuItem1.Name = "déconnexionToolStripMenuItem1";
-            this.déconnexionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.déconnexionToolStripMenuItem1.Text = "Déconnexion";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
             // 
-            // Form1
+            // déconnexionToolStripMenuItem1
+            // 
+            this.déconnexionToolStripMenuItem1.Name = "déconnexionToolStripMenuItem1";
+            this.déconnexionToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.déconnexionToolStripMenuItem1.Text = "Déconnexion";
+            // 
+            // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StartPage";
+            this.Text = "Bienvenue";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

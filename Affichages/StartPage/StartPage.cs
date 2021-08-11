@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ParisWinform.Affichages.ListeJoueurs;
+using ParisWinform.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,33 @@ namespace ParisWinform
 {
     public partial class StartPage : Form
     {
-        public StartPage()
+        private Utilisateur user;
+        public StartPage(Utilisateur u)
         {
+            user = u;
             InitializeComponent();
+            PanelListeJoueurs listeJoueur = new PanelListeJoueurs(user.Login);
+            this.Controls.Add(listeJoueur);
+            listeJoueur.ResumeLayout(false);
+            listeJoueur.PerformLayout();
+            this.ResumeLayout(false);
         }
-
+        
         private void déconnexionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listeDesJoueursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelListeJoueurs listeJoueur = new PanelListeJoueurs(user.Login);
+            listeJoueur.Show();
+        }
+
+        private void débiterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Debiter deb =new Debiter();
+            deb.Show();
         }
     }
 }
