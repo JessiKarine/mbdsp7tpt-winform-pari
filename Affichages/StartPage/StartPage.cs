@@ -1,5 +1,6 @@
 ﻿using ParisWinform.Affichages.Crediter;
 using ParisWinform.Affichages.ListeJoueurs;
+using ParisWinform.Affichages.listeMvtJoueurs;
 using ParisWinform.Affichages.Match.ListeMatch;
 using ParisWinform.model;
 using System;
@@ -60,6 +61,12 @@ namespace ParisWinform
         private void déconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void listeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MvtJoueurList listeMvt =new MvtJoueurList();
+            listeMvt.Show();
         }
     }
 }

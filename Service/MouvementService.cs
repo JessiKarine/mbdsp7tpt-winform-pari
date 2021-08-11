@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using ParisWinform.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -64,6 +66,22 @@ namespace ParisWinform.Service
                         }
                     }
                 }
+            }
+            return null;
+        }
+        public static async Task<List<Mouvement>> getMouvements()
+        {
+            using (var httpClient = WebService.ApiClient)
+            {
+                var request = await httpClient.GetAsync(WebService.uri + "api/mvtJoueur");
+                if (request.IsSuccessStatusCode)
+                {
+                    var resultArray = await request.Content.ReadAsStringAsync();
+                    System.Windows.Forms.MessageBox.Show(resultArray);
+                    var final = JsonConvert.DeserializeObject<List<Mouvement>>(resultArray);
+                    return final;
+                }
+
             }
             return null;
         }

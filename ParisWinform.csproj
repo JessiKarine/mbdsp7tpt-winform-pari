@@ -76,6 +76,12 @@
     <Compile Include="Affichages\ListeJoueurs\PanelListeJoueurs.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Affichages\listeMvtJoueurs\MvtJoueurList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\listeMvtJoueurs\MvtJoueurList.Designer.cs">
+      <DependentUpon>MvtJoueurList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Affichages\Match\ListeMatch\ListeMatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,7 @@
     <Compile Include="model\Categorie.cs" />
     <Compile Include="model\Equipe.cs" />
     <Compile Include="model\Match.cs" />
+    <Compile Include="model\Mouvement.cs" />
     <Compile Include="model\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\ListeJoueurs\ListeJoueurs.resx">
       <DependentUpon>ListeJoueurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Affichages\listeMvtJoueurs\MvtJoueurList.resx">
+      <DependentUpon>MvtJoueurList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
