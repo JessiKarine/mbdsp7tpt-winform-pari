@@ -11,15 +11,15 @@ namespace ParisWinform.model
         public String _id { get; set; }
         public String date { get; set; }
         public String heure { get; set; }
-        public int coteequipe1 { get; set; }
-        public int coteequipe2 { get; set; }
+        public double coteequipe1 { get; set; }
+        public double coteequipe2 { get; set; }
         public String etat { get; set; }
-        public int coteMatchNull { get; set; }
+        public double coteMatchNull { get; set; }
         public Equipe idequipe1 { get; set; }
         public Equipe idequipe2 { get; set; }
         public Categorie idcategorie { get; set; }
 
-        public Match(string id, String date, string heure, Categorie idcategorie,int coteequipe1, int coteequipe2, string etat, int coteMatchNull, Equipe equipe1, Equipe equipe2)
+        public Match(string id, String date, string heure, Categorie idcategorie, double coteequipe1, double coteequipe2, string etat, double coteMatchNull, Equipe equipe1, Equipe equipe2)
         {
             _id = id;
             this.date = date;

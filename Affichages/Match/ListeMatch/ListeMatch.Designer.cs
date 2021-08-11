@@ -46,9 +46,9 @@ namespace ParisWinform.Affichages.Match.ListeMatch
             // 
             this.listView1.HideSelection = false;
             this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView1.Location = new System.Drawing.Point(124, 71);
+            this.listView1.Location = new System.Drawing.Point(26, 71);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(553, 274);
+            this.listView1.Size = new System.Drawing.Size(747, 315);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 

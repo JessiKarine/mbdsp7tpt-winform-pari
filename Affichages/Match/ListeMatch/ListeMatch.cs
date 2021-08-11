@@ -1,4 +1,5 @@
 ﻿using ParisWinform.model;
+using ParisWinform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace ParisWinform.Affichages.Match.ListeMatch
         {
             DisplayTableWithListview();
         }
-        private void DisplayTableWithListview()
+        private async void DisplayTableWithListview()
         {
             listView1.GridLines = true;// Whether the grid lines are displayed
             listView1.FullRowSelect = true;// Whether to select the entire line
@@ -39,19 +40,23 @@ namespace ParisWinform.Affichages.Match.ListeMatch
             listView1.Columns.Add("Equipe 1", 100, HorizontalAlignment.Center);
             listView1.Columns.Add("Equipe 2", 100, HorizontalAlignment.Center);
 
+            List<model.Match>  listeMatch=await MatchService.GetMatches();
 
-            model.Match m1 = new model.Match("60fc41e68d4114089a90cb56", "2021-10 -17", "18:00",new Categorie("2","Premier League","-"), 4, 5, "A venir", 0, new Equipe("1", "Arsenal", "Arsenal.jpg"), new Equipe("2", "Manchester", "Manchester.jpg"));
-            
-            ListViewItem item = new ListViewItem();
-            item.SubItems.Clear();
+            //model.Match m1 = new model.Match("60fc41e68d4114089a90cb56", "2021-10 -17", "18:00",new Categorie("2","Premier League","-"), 4, 5, "A venir", 0, new Equipe("1", "Arsenal", "Arsenal.jpg"), new Equipe("2", "Manchester", "Manchester.jpg"));
 
-            item.SubItems[0].Text =m1._id;
-            item.SubItems.Add(m1.date);
-            item.SubItems.Add(m1.heure);
-            item.SubItems.Add(m1.idcategorie.Nom);
-            item.SubItems.Add(m1.idequipe1.Nom);
-            item.SubItems.Add(m1.idequipe2.Nom);
-            listView1.Items.Add(item);
+            for (int i = 0; i < listeMatch.Count; i++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Clear();
+
+                item.SubItems[0].Text = listeMatch.ElementAt(i)._id;
+                item.SubItems.Add(listeMatch.ElementAt(i).date);
+                item.SubItems.Add(listeMatch.ElementAt(i).heure);
+                item.SubItems.Add(listeMatch.ElementAt(i).idcategorie.Nom);
+                item.SubItems.Add(listeMatch.ElementAt(i).idequipe1.Nom);
+                item.SubItems.Add(listeMatch.ElementAt(i).idequipe2.Nom);
+                listView1.Items.Add(item);
+            }
             
         }
     }
