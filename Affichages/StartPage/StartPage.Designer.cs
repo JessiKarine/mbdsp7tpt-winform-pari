@@ -40,6 +40,9 @@ namespace ParisWinform
             this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.déconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,8 @@ namespace ParisWinform
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listeDesJoueursToolStripMenuItem,
             this.mouToolStripMenuItem,
-            this.déconnexionToolStripMenuItem});
+            this.déconnexionToolStripMenuItem,
+            this.matchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -76,24 +80,24 @@ namespace ParisWinform
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
             // 
             // débiterToolStripMenuItem
             // 
             this.débiterToolStripMenuItem.Name = "débiterToolStripMenuItem";
-            this.débiterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.débiterToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.débiterToolStripMenuItem.Text = "Débiter";
             this.débiterToolStripMenuItem.Click += new System.EventHandler(this.débiterToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(113, 6);
             // 
             // créditerToolStripMenuItem
             // 
             this.créditerToolStripMenuItem.Name = "créditerToolStripMenuItem";
-            this.créditerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.créditerToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.créditerToolStripMenuItem.Text = "Créditer";
             this.créditerToolStripMenuItem.Click += new System.EventHandler(this.créditerToolStripMenuItem_Click);
             // 
@@ -111,19 +115,42 @@ namespace ParisWinform
             // profilToolStripMenuItem
             // 
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.profilToolStripMenuItem.Text = "Profil";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // déconnexionToolStripMenuItem1
             // 
             this.déconnexionToolStripMenuItem1.Name = "déconnexionToolStripMenuItem1";
-            this.déconnexionToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.déconnexionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.déconnexionToolStripMenuItem1.Text = "Déconnexion";
+            this.déconnexionToolStripMenuItem1.Click += new System.EventHandler(this.déconnexionToolStripMenuItem1_Click);
+            // 
+            // matchToolStripMenuItem
+            // 
+            this.matchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeToolStripMenuItem,
+            this.nouveauToolStripMenuItem});
+            this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
+            this.matchToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.matchToolStripMenuItem.Text = "Match";
+            // 
+            // listeToolStripMenuItem
+            // 
+            this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
+            this.listeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeToolStripMenuItem.Text = "Liste";
+            this.listeToolStripMenuItem.Click += new System.EventHandler(this.listeToolStripMenuItem_Click);
+            // 
+            // nouveauToolStripMenuItem
+            // 
+            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauToolStripMenuItem.Text = "Nouveau";
             // 
             // StartPage
             // 
@@ -154,6 +181,9 @@ namespace ParisWinform
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem matchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
     }
 }
 

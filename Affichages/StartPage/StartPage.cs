@@ -1,5 +1,6 @@
 ﻿using ParisWinform.Affichages.Crediter;
 using ParisWinform.Affichages.ListeJoueurs;
+using ParisWinform.Affichages.Match.ListeMatch;
 using ParisWinform.model;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,17 @@ namespace ParisWinform
         {
             Crediter cred =new Crediter();
             cred.Show();
+        }
+
+        private void listeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListeMatch match =new ListeMatch();
+            match.Show();
+        }
+
+        private void déconnexionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
