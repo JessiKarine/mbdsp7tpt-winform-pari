@@ -12,7 +12,7 @@ namespace ParisWinform.Service
 {
     public class LoginService
     {
-        public static async Task<string> CallLogin(string login, string mdp) {
+        public static async Task<Utilisateur> CallLogin(string login, string mdp) {
             using (var httpClient = new HttpClient())
             {
                 var inputdata = new Dictionary<string, string> {
@@ -29,13 +29,14 @@ namespace ParisWinform.Service
                     {
                         string data = await resp.ReadAsStringAsync();
                         if (data != null){
-                            System.Windows.Forms.MessageBox.Show(data);
-                            return data;
+                            //System.Windows.Forms.MessageBox.Show(data);
+                            Utilisateur parsedObject = JsonConvert.DeserializeObject<Utilisateur>(data);
+                            return parsedObject;
                         }
                     }
                 }
             }
-            return "";
+            return null;
         }
     }
 }
