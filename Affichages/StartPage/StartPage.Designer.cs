@@ -95,6 +95,7 @@ namespace ParisWinform
             this.créditerToolStripMenuItem.Name = "créditerToolStripMenuItem";
             this.créditerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.créditerToolStripMenuItem.Text = "Créditer";
+            this.créditerToolStripMenuItem.Click += new System.EventHandler(this.créditerToolStripMenuItem_Click);
             // 
             // déconnexionToolStripMenuItem
             // 

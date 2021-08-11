@@ -1,4 +1,5 @@
-﻿using ParisWinform.Affichages.ListeJoueurs;
+﻿using ParisWinform.Affichages.Crediter;
+using ParisWinform.Affichages.ListeJoueurs;
 using ParisWinform.model;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,12 @@ namespace ParisWinform
         {
             Debiter deb =new Debiter();
             deb.Show();
+        }
+
+        private void créditerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Crediter cred =new Crediter();
+            cred.Show();
         }
     }
 }

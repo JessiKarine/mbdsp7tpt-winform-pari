@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Affichages\Crediter\Crediter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\Crediter\Crediter.Designer.cs">
+      <DependentUpon>Crediter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Affichages\Debiter\Debiter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MouvementService.cs" />
     <Compile Include="Service\WebService.cs" />
+    <EmbeddedResource Include="Affichages\Crediter\Crediter.resx">
+      <DependentUpon>Crediter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Debiter\Debiter.resx">
       <DependentUpon>Debiter.cs</DependentUpon>
     </EmbeddedResource>
