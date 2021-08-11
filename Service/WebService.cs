@@ -12,7 +12,7 @@ namespace ParisWinform.Service
     public static class WebService
     {
         public static System.Net.Http.HttpClient ApiClient { get; set; }
-        public static string uri = "http://localhost:3000/api/utilisateur/login";
+        public static string uri = "http://localhost:3000/";
         
         public static void InitializeClient()
         {
