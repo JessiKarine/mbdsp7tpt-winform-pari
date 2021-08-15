@@ -30,44 +30,39 @@ namespace ParisWinform
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.listeDesJoueursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mouToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.débiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.créditerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.déconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.résultatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listeDesJoueursToolStripMenuItem,
+            this.matchToolStripMenuItem,
+            this.résultatsToolStripMenuItem,
             this.mouToolStripMenuItem,
-            this.déconnexionToolStripMenuItem,
-            this.matchToolStripMenuItem});
+            this.déconnexionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // listeDesJoueursToolStripMenuItem
-            // 
-            this.listeDesJoueursToolStripMenuItem.Name = "listeDesJoueursToolStripMenuItem";
-            this.listeDesJoueursToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.listeDesJoueursToolStripMenuItem.Text = "Liste des joueurs";
-            this.listeDesJoueursToolStripMenuItem.Click += new System.EventHandler(this.listeDesJoueursToolStripMenuItem_Click);
             // 
             // mouToolStripMenuItem
             // 
@@ -106,6 +101,18 @@ namespace ParisWinform
             this.créditerToolStripMenuItem.Text = "Créditer";
             this.créditerToolStripMenuItem.Click += new System.EventHandler(this.créditerToolStripMenuItem_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            // 
+            // listeToolStripMenuItem1
+            // 
+            this.listeToolStripMenuItem1.Name = "listeToolStripMenuItem1";
+            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listeToolStripMenuItem1.Text = "Liste";
+            this.listeToolStripMenuItem1.Click += new System.EventHandler(this.listeToolStripMenuItem1_Click);
+            // 
             // déconnexionToolStripMenuItem
             // 
             this.déconnexionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -139,41 +146,50 @@ namespace ParisWinform
             // 
             this.matchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listeToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.nouveauToolStripMenuItem});
+            this.toolStripSeparator5});
             this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
-            this.matchToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.matchToolStripMenuItem.Text = "Match";
+            this.matchToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.matchToolStripMenuItem.Text = "Matchs";
             // 
             // listeToolStripMenuItem
             // 
             this.listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            this.listeToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.listeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeToolStripMenuItem.Text = "Liste";
             this.listeToolStripMenuItem.Click += new System.EventHandler(this.listeToolStripMenuItem_Click);
-            // 
-            // nouveauToolStripMenuItem
-            // 
-            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.nouveauToolStripMenuItem.Text = "Nouveau";
-            // 
-            // listeToolStripMenuItem1
-            // 
-            this.listeToolStripMenuItem1.Name = "listeToolStripMenuItem1";
-            this.listeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.listeToolStripMenuItem1.Text = "Liste";
-            this.listeToolStripMenuItem1.Click += new System.EventHandler(this.listeToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            // 
+            // résultatsToolStripMenuItem
+            // 
+            this.résultatsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeToolStripMenuItem2,
+            this.toolStripSeparator6,
+            this.nouveauToolStripMenuItem});
+            this.résultatsToolStripMenuItem.Name = "résultatsToolStripMenuItem";
+            this.résultatsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.résultatsToolStripMenuItem.Text = "Résultats";
+            // 
+            // listeToolStripMenuItem2
+            // 
+            this.listeToolStripMenuItem2.Name = "listeToolStripMenuItem2";
+            this.listeToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listeToolStripMenuItem2.Text = "Liste";
+            this.listeToolStripMenuItem2.Click += new System.EventHandler(this.listeToolStripMenuItem2_Click);
+            // 
+            // nouveauToolStripMenuItem
+            // 
+            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauToolStripMenuItem.Text = "Nouveau";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
             // 
             // StartPage
             // 
@@ -194,7 +210,6 @@ namespace ParisWinform
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem listeDesJoueursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mouToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem débiterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créditerToolStripMenuItem;
@@ -206,10 +221,13 @@ namespace ParisWinform
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem matchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem résultatsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
     }
 }
 

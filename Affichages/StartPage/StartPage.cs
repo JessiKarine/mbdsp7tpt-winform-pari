@@ -2,6 +2,7 @@
 using ParisWinform.Affichages.ListeJoueurs;
 using ParisWinform.Affichages.listeMvtJoueurs;
 using ParisWinform.Affichages.Match.ListeMatch;
+using ParisWinform.Affichages.Resultats;
 using ParisWinform.model;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,12 @@ namespace ParisWinform
         {
             MvtJoueurList listeMvt =new MvtJoueurList();
             listeMvt.Show();
+        }
+
+        private void listeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ResultatList listeResultat =new ResultatList();
+            listeResultat.Show();
         }
     }
 }

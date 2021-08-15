@@ -88,6 +88,12 @@
     <Compile Include="Affichages\Match\ListeMatch\ListeMatch.Designer.cs">
       <DependentUpon>ListeMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Affichages\Resultats\ResultatList\ResultatList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\Resultats\ResultatList\ResultatList.Designer.cs">
+      <DependentUpon>ResultatList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Affichages\StartPage\StartPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,15 +107,19 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Categorie.cs" />
+    <Compile Include="model\DocsResultat.cs" />
     <Compile Include="model\Equipe.cs" />
     <Compile Include="model\Match.cs" />
     <Compile Include="model\Mouvement.cs" />
+    <Compile Include="model\Resultat.cs" />
+    <Compile Include="model\ResultatAggregated.cs" />
     <Compile Include="model\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MatchService.cs" />
     <Compile Include="Service\MouvementService.cs" />
+    <Compile Include="Service\ResultatService.cs" />
     <Compile Include="Service\WebService.cs" />
     <EmbeddedResource Include="Affichages\Crediter\Crediter.resx">
       <DependentUpon>Crediter.cs</DependentUpon>
@@ -128,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Match\ListeMatch\ListeMatch.resx">
       <DependentUpon>ListeMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Affichages\Resultats\ResultatList\ResultatList.resx">
+      <DependentUpon>ResultatList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\StartPage\StartPage.resx">
       <DependentUpon>StartPage.cs</DependentUpon>
