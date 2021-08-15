@@ -1,4 +1,6 @@
-﻿using ParisWinform.model;
+﻿using ParisWinform.Affichages.Resultats.resultatDetail;
+using ParisWinform.model;
+using ParisWinform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace ParisWinform.Affichages.Resultats
 {
     public partial class ResultatList : Form
     {
+        string idClicked;
+        List<ResultatAggregated> listeResultat;
         public ResultatList()
         {
             InitializeComponent();
@@ -40,21 +44,49 @@ namespace ParisWinform.Affichages.Resultats
             listView1.Columns.Add("Point Eq. 2", 100, HorizontalAlignment.Center);
 
             DocsResultat dcResultat = await Service.ResultatService.GetResultatsDocs();
-            List<ResultatAggregated> listeResultat = dcResultat.docs;
+            listeResultat = dcResultat.docs;
             for (int i = 0; i < listeResultat.Count; i++)
             {
                 ListViewItem item = new ListViewItem();
                 item.SubItems.Clear();
-
                 item.SubItems[0].Text = listeResultat[i]._id;
                 item.SubItems.Add(listeResultat.ElementAt(i).date.ToString());
                 item.SubItems.Add(listeResultat.ElementAt(i).heure);
-                item.SubItems.Add(listeResultat.ElementAt(i).idmatch.ElementAt(0).idequipe1.Nom+" VS "+ listeResultat[i].idmatch.ElementAt(0).idequipe2.Nom);
-                item.SubItems.Add(""+listeResultat.ElementAt(i).pointequipe1);
+                item.SubItems.Add(listeResultat.ElementAt(i).idmatch.ElementAt(0).idequipe1.Nom + " VS " + listeResultat[i].idmatch.ElementAt(0).idequipe2.Nom);
+                item.SubItems.Add("" + listeResultat.ElementAt(i).pointequipe1);
                 item.SubItems.Add("" + listeResultat.ElementAt(i).pointequipe2);
                 listView1.Items.Add(item);
             }
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            idClicked = listView1.SelectedItems[0].Text;
+            
+        }
+        private ResultatAggregated getResultatFromList()
+        {
+            ResultatAggregated res = null;
+            if (listeResultat != null)
+            {
+                for (int i = 0; i < listeResultat.Count; i++)
+                {
+                    if (listeResultat.ElementAt(i)._id.CompareTo(idClicked) == 0)
+                    {
+                        res = listeResultat.ElementAt(i);
+                        break;
+                    }
+                }
+            }
+            return res;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ResultatService.deleteResultat(idClicked);
+            this.listView1.Clear();
+            this.ResultatList_Load(sender, e);
         }
     }
 }

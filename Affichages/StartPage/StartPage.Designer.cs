@@ -99,7 +99,7 @@ namespace ParisWinform
             // 
             this.listeToolStripMenuItem2.Name = "listeToolStripMenuItem2";
             this.listeToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.listeToolStripMenuItem2.Text = "Page d\'accueil";
+            this.listeToolStripMenuItem2.Text = "Liste";
             this.listeToolStripMenuItem2.Click += new System.EventHandler(this.listeToolStripMenuItem2_Click);
             // 
             // toolStripSeparator6
@@ -199,7 +199,7 @@ namespace ParisWinform
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartPage";
-            this.Text = "Page d'accueil";
+            this.Text = "Page d\'accueil";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

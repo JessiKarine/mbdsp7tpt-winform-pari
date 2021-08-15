@@ -57,5 +57,10 @@ namespace ParisWinform.Affichages.listeMvtJoueurs
             }
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(listView1.SelectedItems[0].Text);
+        }
     }
 }

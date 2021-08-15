@@ -30,7 +30,6 @@ namespace ParisWinform.Affichages.listeMvtJoueurs
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,21 +37,14 @@ namespace ParisWinform.Affichages.listeMvtJoueurs
             // 
             // listView1
             // 
+            this.listView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(85, 72);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(640, 310);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(329, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Liste des Mouvements";
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -89,10 +81,9 @@ namespace ParisWinform.Affichages.listeMvtJoueurs
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Name = "MvtJoueurList";
-            this.Text = "MvtJoueurList";
+            this.Text = "Liste des Mouvements";
             this.Load += new System.EventHandler(this.MvtJoueurList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,7 +93,6 @@ namespace ParisWinform.Affichages.listeMvtJoueurs
         #endregion
 
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
