@@ -5,7 +5,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ParisWinform.Service
 {
@@ -13,10 +15,11 @@ namespace ParisWinform.Service
     {
         public static async Task<List<model.Match>> GetMatches(String suite)
         {
+            
             if (WebService.ApiClient == null) {
                 WebService.InitializeClient();
             }
-            using (var httpClient = WebService.ApiClient)
+            using (var httpClient = new HttpClient())
             {
                 var request = await httpClient.GetAsync(WebService.uri+ "api/match"+ suite);
                 if (request.IsSuccessStatusCode)

@@ -71,7 +71,7 @@ namespace ParisWinform.Service
         }
         public static async Task<List<Mouvement>> getMouvements()
         {
-            using (var httpClient = WebService.ApiClient)
+            using (var httpClient = new HttpClient())
             {
                 var request = await httpClient.GetAsync(WebService.uri + "api/mvtJoueur");
                 if (request.IsSuccessStatusCode)

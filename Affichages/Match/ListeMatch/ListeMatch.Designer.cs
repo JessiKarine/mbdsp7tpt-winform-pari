@@ -39,23 +39,23 @@ namespace ParisWinform.Affichages.Match.ListeMatch
             // 
             this.listView1.HideSelection = false;
             this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView1.Location = new System.Drawing.Point(26, 71);
+            this.listView1.Location = new System.Drawing.Point(91, 70);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(747, 315);
+            this.listView1.Size = new System.Drawing.Size(613, 315);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 34);
+            this.textBox1.Location = new System.Drawing.Point(146, 31);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(193, 20);
             this.textBox1.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 41);
+            this.label2.Location = new System.Drawing.Point(88, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 4;
@@ -65,7 +65,7 @@ namespace ParisWinform.Affichages.Match.ListeMatch
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(187, 31);
+            this.button1.Location = new System.Drawing.Point(345, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
