@@ -55,5 +55,34 @@ namespace ParisWinform.Service
 
             }
         }
+        public static async Task<string> createResultat(string date, string heure, string idmatch, string pointeq1, string pointeq2)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var inputdata = new Dictionary<string, string> {
+                    { "date",date },
+                    { "heure",heure },
+                    { "idmatch",idmatch },
+                    { "pointeq1",pointeq1 },
+                    { "pointeq2",pointeq2 }
+                };
+                using (var content = new FormUrlEncodedContent(inputdata))
+                {
+                    content.Headers.Clear();
+                    content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+
+                    HttpResponseMessage response = await httpClient.PostAsync(WebService.uri + "api/resultat", content);
+                    using (HttpContent resp = response.Content)
+                    {
+                        var data = await resp.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

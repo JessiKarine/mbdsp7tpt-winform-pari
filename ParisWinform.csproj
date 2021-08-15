@@ -82,17 +82,23 @@
     <Compile Include="Affichages\listeMvtJoueurs\MvtJoueurList.Designer.cs">
       <DependentUpon>MvtJoueurList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Affichages\Match\ListeMatchCheckbox\ListMatchCheckBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\Match\ListeMatchCheckbox\ListMatchCheckBox.Designer.cs">
+      <DependentUpon>ListMatchCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Affichages\Match\ListeMatch\ListeMatch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Affichages\Match\ListeMatch\ListeMatch.Designer.cs">
       <DependentUpon>ListeMatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Affichages\resultatDetail\ResultatDetail.cs">
+    <Compile Include="Affichages\ResultatSaisie\ResultatSaisie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Affichages\resultatDetail\ResultatDetail.Designer.cs">
-      <DependentUpon>ResultatDetail.cs</DependentUpon>
+    <Compile Include="Affichages\ResultatSaisie\ResultatSaisie.Designer.cs">
+      <DependentUpon>ResultatSaisie.cs</DependentUpon>
     </Compile>
     <Compile Include="Affichages\Resultats\ResultatList\ResultatList.cs">
       <SubType>Form</SubType>
@@ -143,11 +149,14 @@
     <EmbeddedResource Include="Affichages\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Affichages\Match\ListeMatchCheckbox\ListMatchCheckBox.resx">
+      <DependentUpon>ListMatchCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Match\ListeMatch\ListeMatch.resx">
       <DependentUpon>ListeMatch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Affichages\resultatDetail\ResultatDetail.resx">
-      <DependentUpon>ResultatDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Affichages\ResultatSaisie\ResultatSaisie.resx">
+      <DependentUpon>ResultatSaisie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Resultats\ResultatList\ResultatList.resx">
       <DependentUpon>ResultatList.cs</DependentUpon>

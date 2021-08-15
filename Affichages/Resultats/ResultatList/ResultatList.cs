@@ -1,4 +1,4 @@
-﻿using ParisWinform.Affichages.Resultats.resultatDetail;
+﻿
 using ParisWinform.model;
 using ParisWinform.Service;
 using System;

@@ -3,6 +3,7 @@ using ParisWinform.Affichages.ListeJoueurs;
 using ParisWinform.Affichages.listeMvtJoueurs;
 using ParisWinform.Affichages.Match.ListeMatch;
 using ParisWinform.Affichages.Resultats;
+using ParisWinform.Affichages.ResultatSaisie;
 using ParisWinform.model;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,12 @@ namespace ParisWinform
         {
             ResultatList listeResultat =new ResultatList();
             listeResultat.Show();
+        }
+
+        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResultatSaisie rs =new ResultatSaisie();
+            rs.Show();
         }
     }
 }
