@@ -82,6 +82,18 @@
     <Compile Include="Affichages\listeMvtJoueurs\MvtJoueurList.Designer.cs">
       <DependentUpon>MvtJoueurList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Affichages\ListePariCheckbox\ListePariCheckBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\ListePariCheckbox\ListePariCheckBox.Designer.cs">
+      <DependentUpon>ListePariCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Affichages\ListUserCheckbox\ListUserCheckBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affichages\ListUserCheckbox\ListUserCheckBox.Designer.cs">
+      <DependentUpon>ListUserCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Affichages\Match\ListeMatchCheckbox\ListMatchCheckBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,7 @@
     <Compile Include="model\Match.cs" />
     <Compile Include="model\Message.cs" />
     <Compile Include="model\Mouvement.cs" />
+    <Compile Include="model\Pari.cs" />
     <Compile Include="model\Resultat.cs" />
     <Compile Include="model\ResultatAggregated.cs" />
     <Compile Include="model\Utilisateur.cs" />
@@ -132,7 +145,9 @@
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MatchService.cs" />
     <Compile Include="Service\MouvementService.cs" />
+    <Compile Include="Service\PariService.cs" />
     <Compile Include="Service\ResultatService.cs" />
+    <Compile Include="Service\UtilisateurService.cs" />
     <Compile Include="Service\WebService.cs" />
     <EmbeddedResource Include="Affichages\Crediter\Crediter.resx">
       <DependentUpon>Crediter.cs</DependentUpon>
@@ -145,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\listeMvtJoueurs\MvtJoueurList.resx">
       <DependentUpon>MvtJoueurList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Affichages\ListePariCheckbox\ListePariCheckBox.resx">
+      <DependentUpon>ListePariCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Affichages\ListUserCheckbox\ListUserCheckBox.resx">
+      <DependentUpon>ListUserCheckBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Affichages\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
