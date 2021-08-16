@@ -1,4 +1,6 @@
-﻿using ParisWinform.Service;
+﻿using ParisWinform.Affichages.ListePariCheckbox;
+using ParisWinform.Affichages.ListUserCheckbox;
+using ParisWinform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,22 @@ namespace ParisWinform.Affichages.Crediter
                 System.Windows.Forms.MessageBox.Show(result);
                 this.Hide();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ListUserCheckBox listUser = new ListUserCheckBox();
+            listUser.iduser = this.textBox2;
+            listUser.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListePariCheckBox listUser = new ListePariCheckBox();
+            listUser.iduser = this.textBox2;
+            listUser.mise = this.textBox4;
+            listUser.idpari = this.textBox1;
+            listUser.Show();
         }
     }
 }

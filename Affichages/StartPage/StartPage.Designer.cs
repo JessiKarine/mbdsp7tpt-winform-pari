@@ -45,9 +45,9 @@ namespace ParisWinform
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.listeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.déconnexionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,19 +98,19 @@ namespace ParisWinform
             // listeToolStripMenuItem2
             // 
             this.listeToolStripMenuItem2.Name = "listeToolStripMenuItem2";
-            this.listeToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listeToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
             this.listeToolStripMenuItem2.Text = "Liste";
             this.listeToolStripMenuItem2.Click += new System.EventHandler(this.listeToolStripMenuItem2_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(119, 6);
             // 
             // nouveauToolStripMenuItem
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.nouveauToolStripMenuItem.Text = "Nouveau";
             this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
             // 
@@ -166,19 +166,12 @@ namespace ParisWinform
             // déconnexionToolStripMenuItem
             // 
             this.déconnexionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.profilToolStripMenuItem,
             this.toolStripSeparator3,
             this.déconnexionToolStripMenuItem1});
             this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
-            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.déconnexionToolStripMenuItem.Text = "Profil utilisateur";
+            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.déconnexionToolStripMenuItem.Text = "Session";
             this.déconnexionToolStripMenuItem.Click += new System.EventHandler(this.déconnexionToolStripMenuItem_Click);
-            // 
-            // profilToolStripMenuItem
-            // 
-            this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.profilToolStripMenuItem.Text = "Profil";
             // 
             // toolStripSeparator3
             // 
@@ -192,15 +185,26 @@ namespace ParisWinform
             this.déconnexionToolStripMenuItem1.Text = "Déconnexion";
             this.déconnexionToolStripMenuItem1.Click += new System.EventHandler(this.déconnexionToolStripMenuItem1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(650, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bonjour "+this.user.Prenom;
+            // 
             // StartPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartPage";
             this.Text = "Page d\'accueil";
+            this.Load += new System.EventHandler(this.StartPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -215,7 +219,6 @@ namespace ParisWinform
         private System.Windows.Forms.ToolStripMenuItem débiterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créditerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -229,6 +232,7 @@ namespace ParisWinform
         private System.Windows.Forms.ToolStripMenuItem listeToolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }
 

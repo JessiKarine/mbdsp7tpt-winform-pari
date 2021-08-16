@@ -49,5 +49,10 @@ namespace ParisWinform
             listUser.idpari = this.textBox1;
             listUser.Show();
         }
+
+        private void Debiter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

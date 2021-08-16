@@ -24,11 +24,11 @@ namespace ParisWinform
         {
             user = u;
             InitializeComponent();
-            PanelListeJoueurs listeJoueur = new PanelListeJoueurs(user.Login);
+            /*PanelListeJoueurs listeJoueur = new PanelListeJoueurs(user.Login);
             this.Controls.Add(listeJoueur);
             listeJoueur.ResumeLayout(false);
             listeJoueur.PerformLayout();
-            this.ResumeLayout(false);
+            this.ResumeLayout(false);*/
         }
         
         private void déconnexionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,6 +81,11 @@ namespace ParisWinform
         {
             ResultatSaisie rs =new ResultatSaisie();
             rs.Show();
+        }
+
+        private void StartPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

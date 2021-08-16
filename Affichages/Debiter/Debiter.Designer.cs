@@ -173,6 +173,7 @@ namespace ParisWinform
             this.Controls.Add(this.label1);
             this.Name = "Debiter";
             this.Text = "Debiter";
+            this.Load += new System.EventHandler(this.Debiter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
