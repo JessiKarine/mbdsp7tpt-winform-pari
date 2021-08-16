@@ -77,7 +77,7 @@ namespace ParisWinform.Service
                 if (request.IsSuccessStatusCode)
                 {
                     var resultArray = await request.Content.ReadAsStringAsync();
-                    System.Windows.Forms.MessageBox.Show(resultArray);
+                    //System.Windows.Forms.MessageBox.Show(resultArray);
                     var final = JsonConvert.DeserializeObject<List<Mouvement>>(resultArray);
                     return final;
                 }

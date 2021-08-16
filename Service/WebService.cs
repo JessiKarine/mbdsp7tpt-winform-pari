@@ -12,8 +12,9 @@ namespace ParisWinform.Service
     public static class WebService
     {
         public static System.Net.Http.HttpClient ApiClient { get; set; }
-        public static string uri = "http://localhost:3000/";
-        
+        //public static string uri = "http://localhost:3000/"; 
+        public static string uri = "https://mbdsp7-node-tpt-pari.herokuapp.com/";
+
         public static void InitializeClient()
         {
             ApiClient = new HttpClient();
