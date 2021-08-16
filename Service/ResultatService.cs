@@ -63,8 +63,8 @@ namespace ParisWinform.Service
                     { "date",date },
                     { "heure",heure },
                     { "idmatch",idmatch },
-                    { "pointeq1",pointeq1 },
-                    { "pointeq2",pointeq2 }
+                    { "pointequipe1",pointeq1 },
+                    { "pointequipe2",pointeq2 }
                 };
                 using (var content = new FormUrlEncodedContent(inputdata))
                 {

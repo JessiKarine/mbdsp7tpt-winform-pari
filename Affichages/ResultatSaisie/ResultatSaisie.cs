@@ -1,4 +1,5 @@
-﻿using ParisWinform.Service;
+﻿using ParisWinform.Affichages.Match.ListeMatchCheckbox;
+using ParisWinform.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,18 @@ namespace ParisWinform.Affichages.ResultatSaisie
                 this.Hide();
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListMatchCheckBox listeMatch =new ListMatchCheckBox();
+            listeMatch.idmatch = this.textBox3;
+            listeMatch.Show();
+        }
+
+        private void ResultatSaisie_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
