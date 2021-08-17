@@ -1,0 +1,1 @@
+Merci de trouver l'executable dans mbdsp7tpt-winform-pari\bin\Release\ParisWinform.exe
